@@ -1,0 +1,163 @@
+/* * means Selects all elements  */
+*{
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+}
+
+/*Link Styling*/
+a { 
+text-decoration: none;
+}
+
+/*Header Styling*/
+header{ 
+    background-color: burlywood;
+    display: flex;
+    align-items: center; /*itmes in center*/
+    padding: 10px 0;
+}
+header ul{
+    list-style: none; /*For Removing Dots on List*/
+    display: flex;
+    padding: 0;
+    margin: 0;
+}
+header a{
+    color: black;
+}
+
+/* # Selects the element with id form html */
+
+#logo{
+    margin: 0 auto;  /*Auto gap from left and right btw all header items only when work when display:flex */
+    font-size: 30px;
+}
+
+/*Menu items Styling*/
+#menu li{
+    padding: 10px; /*For space btw items*/
+}
+
+/*Social-links icons Styling*/
+#social-links li{
+    padding: 10px; /*For space btw icons*/
+}
+
+#main {
+    display: flex;
+}
+
+aside{
+    flex: 0 0 20vw;  /* vw measn vertical view */
+    background-color:black;
+    padding: 10px;
+}
+aside ul{
+    list-style: none;
+    padding: 0;
+}
+aside ul a {
+color: burlywood;
+padding: 10px; /* padiing not work without display:block */
+display: block;
+border-bottom: 1px solid grey;
+}
+aside img {
+    width: 100%;
+}
+
+article{
+    padding: 10px;
+}
+
+/*Service Styling*/
+.services-container{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.service-box{
+    border: 1px solid #eee;
+    flex-basis: 32%;
+    max-width: 370px;
+    padding: 10px;
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+}
+.service-box img {
+    width: 100%;
+}
+.service-box h3{
+    margin: 5px 0 10px;
+}
+.service-box p{
+    margin: 0 0 10px;
+}
+
+/*Button Styling*/
+.service-button {
+    align-self: flex-start;
+    margin-top: auto;
+}
+
+.service-button a{
+background-color: grey;
+border: 2px solid transparent;
+color: #000;
+padding: 8px 13px;
+display: block;
+}
+
+.service-button a:hover{
+    background-color: transparent;
+    border: 2px solid grey;
+    color: grey;
+    }
+
+/*Footer Styling*/
+footer {
+background-color: burlywood;
+color: black;
+text-align: center;
+padding: 10px 0;
+}
+
+
+@media screen and (max-width:850px) {
+    .service-box{
+        flex-basis: 48%;
+    }
+
+    aside{
+        flex: 0 0 30vw;
+    }
+}
+
+@media screen and (max-width:600px) {
+  header{
+    flex-direction: column;
+  }
+  #logo{
+    order: -1;
+  }
+  #main{
+    flex-direction: column;
+  }
+  article{
+    order: -1;
+  }
+  .services-container{
+    flex-direction: column;
+    align-items: center;
+  }
+  h2{
+    text-align: center;
+  }
+}
